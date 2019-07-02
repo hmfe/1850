@@ -1,0 +1,161 @@
+:root {
+  --bg: #ededed;
+  --alpha: #cfcfcf;
+  --beta: #8a8a8a;
+  --gamma: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  padding: 0 5%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-section {
+  background: var(--bg);
+  padding: 20px 15px 50px 15px;
+  font-family: "Arial";
+}
+
+.search-section__title {
+  position: absolute;
+  left: -9999px;
+}
+
+.form {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.form__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  padding: 30px;
+  font-size: 20px;
+  border: 2px solid var(--alpha);
+}
+
+.form__input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.btn-delete {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--beta);
+}
+
+.btn-clear {
+  background: none;
+  font-size: 13px;
+  border: none;
+  text-decoration: underline;
+}
+
+.results {
+  background: var(--gamma);
+  border: 2px solid var(--alpha);
+  margin-bottom: 30px;
+  padding: 20px 30px;
+  max-height: 150px;
+  overflow: auto;
+  display: none;
+}
+
+.results__item + .results__item {
+  margin-top: 15px;
+}
+
+.results__item:hover,
+.results__item:focus {
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.history {
+  margin-top: 30px;
+  display: none;
+}
+
+.history__heading {
+  font-size: 25px;
+}
+
+.row + .history__list {
+  margin-top: 20px;
+}
+
+.history__list-item {
+  padding: 15px 15px 15px 0px;
+  font-size: 18px;
+  border-bottom: 1px solid var(--alpha);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history__list-item:first-of-type {
+  border-top: 1px solid var(--alpha);
+}
+
+.history__time {
+  font-size: 14px;
+  color: var(--beta);
+  margin-right: 80px;
+}
+
+.active {
+  display: block;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 740px) {
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .history__list-item {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .history__task {
+    display: block;
+    width: 90%;
+    margin-bottom: 5px;
+  }
+
+  .history__time {
+    margin-right: 0px;
+  }
+}

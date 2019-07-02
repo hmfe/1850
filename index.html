@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="button.css" />
+    <link rel="stylesheet" href="form.css" />
+    <title>tasks</title>
+  </head>
+  <body>
+    <!-- THIRD TASK -->
+    <section class="search-section" aria-label="Search to-do's">
+      <h1 class="search-section__title">Search todos</h1>
+      <form
+        action="#"
+        role="search"
+        aria-label="Search form"
+        class="form"
+        autocomplete="off"
+      >
+        <input
+          class="form__input js-input"
+          type="search"
+          id="search-input"
+          name="search"
+          spellcheck="false"
+          aria-label="Search to-do's"
+          placeholder="Search to-do's..."
+          required
+        />
+        <button
+          class="btn-delete js-clear-input"
+          type="button"
+          role="botton"
+          aria-label="Clear input"
+        >
+          &#x2715;
+        </button>
+      </form>
+      <ul class="results js-results-list" aria-label="Search results"></ul>
+      <section class="history" aria-label="Search history subsection">
+        <div class="container">
+          <div class="row">
+            <h1 class="history__heading">Search history</h1>
+            <button
+              class="btn-clear js-clear-history"
+              role="button"
+              type="button"
+              aria-label="Clear search history"
+            >
+              Clear search history
+            </button>
+          </div>
+          <ul
+            class="history__list js-history-list"
+            aria-label="Search history list"
+          ></ul>
+        </div>
+      </section>
+    </section>
+
+    <br />
+    <br />
+    <br />
+
+    <!-- FIRST TASK -->
+    <button class="btn" role="button" type="button" aria-label="Delete button">
+      Delete
+    </button>
+    <script src="main.js"></script>
+  </body>
+</html>
